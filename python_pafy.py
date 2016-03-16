@@ -3,6 +3,10 @@ URL = https://pypi.python.org/pypi/pafy#downloads
 Ubuntu - install python-pafy
 sudo pip install youtube-dl
 sudo pip install pafy
+
+How to use it -
+
+python python_pafy.py -u "URL" --video/--audio
 '''
 
 import pafy
