@@ -27,7 +27,7 @@ if __name__ == '__main__':
     parser = ArgumentParser("YouTube Downloader script")
     parser.add_argument('-u', '--url', help='URL of the YouTube video to be downloaded .',
                         required=True)
-    parser.add_argument('--audio', action='store_true') // to download audio
-    parser.add_argument('--video', action='store_true') // to download video
+    parser.add_argument('--audio', action='store_true') 
+    parser.add_argument('--video', action='store_true') 
     args = parser.parse_args()
     main(args.url,args.video,args.audio)
