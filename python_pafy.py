@@ -13,14 +13,17 @@ import pafy
 
 def main(url,v,a):
     video = pafy.new(url)
+    import pdb;pdb.set_trace()
     if v:
         best = video.getbest()
         print ("Downloading video %s  , resolution = %s" %(video.title,best.resolution))
         best.download(quiet = False)
     elif a:
-        bestaudio = video.getbestaudio()
-        print ("Downloading audio %s  , bitrate = %s" %(video.title,bestaudio.bitrate))
-        bestaudio.download()
+	streams = video.audiostreams
+	print streams
+	input = int(raw_input("Enter audio index to be downloaded."))
+        print ("Downloading audio %s  , bitrate = %s" %(streams[input].title,streams[input].bitrate))
+        streams[input].download()
 
 if __name__ == '__main__':
     from argparse import ArgumentParser
