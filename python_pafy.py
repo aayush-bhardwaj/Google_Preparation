@@ -13,7 +13,6 @@ import pafy
 
 def main(url,v,a):
     video = pafy.new(url)
-    import pdb;pdb.set_trace()
     if v:
         best = video.getbest()
         print ("Downloading video %s  , resolution = %s" %(video.title,best.resolution))
